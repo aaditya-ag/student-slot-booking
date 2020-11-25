@@ -1,0 +1,78 @@
+body{
+    margin: 0;
+    font-family: 'Merriweather', serif;
+    background-color:black;
+}
+
+h1{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 3rem;
+    text-align: center;
+}
+
+h3{
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+input, select{
+    width:90%;
+    padding: 15px;
+    margin-top:10px;
+    background-color: #f1f1f1;
+    border-color:#f1f1f1;
+    border-radius: 5px;
+}
+
+input:focus, select:focus {
+    background-color: #ddd;
+    border-color: black;
+}
+
+label{
+    display:block;
+}
+
+.btn{
+    padding:10px 20px;
+    width:15%;
+    font-size:100%;
+    margin: 50px auto 50px auto;
+    background-color: black;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    color: white;
+}
+
+.btn:hover{
+    background-color: white;
+    color: black;
+    border-color: black;
+}
+
+.placeholder-form{
+    background-color:white;
+    border-radius: 10px;
+    margin: 100px auto 100px auto;
+    padding: 50px;
+    width: 70%;
+    box-sizing: border-box;
+
+}
+
+.form-row{
+    margin: 10px auto 10px auto;
+    text-align: center;
+}
+
+.form-left-element{
+    width: 40%;
+    display: inline-block;
+    margin: 10px 2.5% 10px 2.5%;
+}
+
+.form-right-element{
+    width: 40%;
+    display: inline-block;
+    margin: 10px 2.5% 10px 2.5%;
+}

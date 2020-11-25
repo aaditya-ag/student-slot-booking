@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel = "stylesheet" type = "text/css" href = "styles.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&family=Montserrat&family=Sacramento&display=swap" rel="stylesheet">
+    <title>Book a Free Trial</title>
+</head>
+<body>
+    <div class = "placeholder-form">
+        <form action = "">
+        
+            <h1>Book a Free Trial!</h1>
+            <h3>Sign Up below</h3>
+            <hr>
+            <div class = "form-row">
+                <div class = "form-left-element">
+                    <label for = "parent-name">Parent's Name:</label>
+                    <input type="text" placeholder="Enter Parent's Name" name="parent-name" required>
+                </div>
+                <div class = "form-right-element">
+                <label for = "parent-contact">Parent's Contact Number:</label>
+                <input type="tel" placeholder="Enter Parent's Contact Number" name="parent-name" required>
+                </div>
+            </div>
+            <div class = "form-row">
+                <div class = "form-left-element">
+                    <label for = "parent-email">Parent's Email ID:</label>
+                    <input type= "email" placeholder="Enter Parent's email ID" name="parent-email" required>
+                </div>
+                <div class = "form-right-element">
+                    <label for = "child-name">Child's Name:</label>
+                    <input type="text" placeholder="Enter Child's Name" name="child-name" required>
+                </div>
+            </div>
+            <div class = "form-row">
+                <div class = "form-left-element">
+                    <label for = "child-age">Child's Age:</label>
+                    <input type= "number" placeholder="Enter Child's Age" name="child-age" min = "6" max = "15" required>
+                </div>
+                <div class = "form-right-element">
+                    <label for = "courses">Courses:</label>
+                    <select name="courses" id="courses"></select>
+                </div>
+                
+            </div>
+            <div class = "form-row">
+                <div class = "form-left-element">
+                    <label for = "dates">Dates:</label>
+                    <select name="dates" id="dates"></select>
+                </div>
+                <div class = "form-right-element">
+                    <label for = "slots">Time-Slots:</label>
+                    <select name="slots" id="slots"></select>
+                </div>
+            </div>
+            <div class = "form-row">
+                <button class = "btn" type ="submit">Submit!</button>
+            </div>
+        </form>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src = "index.js" charset="UTF-8"></script>
+</body>
+</html>

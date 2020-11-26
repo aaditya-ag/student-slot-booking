@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class = "placeholder-form">
-        <form action = "">
+        <form action = "" id="signup" enctype="multipart/form-data">
         
             <h1>Book a Free Trial!</h1>
             <h3>Sign Up below</h3>
@@ -21,8 +21,8 @@
                     <input type="text" placeholder="Enter Parent's Name" name="parent-name" required>
                 </div>
                 <div class = "form-right-element">
-                <label for = "parent-contact">Parent's Contact Number:</label>
-                <input type="tel" placeholder="Enter Parent's Contact Number" name="parent-name" required>
+                <label for = "parent-contact">Parent's 10-digit Mobile Number:</label>
+                <input type="tel" placeholder="Enter Parent's Contact Number" name="parent-contact" id = "pno" required>
                 </div>
             </div>
             <div class = "form-row">
@@ -60,6 +60,7 @@
                 <button class = "btn" type ="submit">Submit!</button>
             </div>
         </form>
+        <span></span>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src = "index.js" charset="UTF-8"></script>

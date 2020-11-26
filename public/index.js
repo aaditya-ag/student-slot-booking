@@ -44,8 +44,32 @@ function validatePhone(){
     if(regx.test(text))
         return true;
     else
+        alert("Please correct Phone number");
         return false;
 }
+
+function validate(){
+    if($("#courses :selected").text() === "Choose Course"){
+        alert("Please pick a Course");
+        return false;
+    }
+    if($("#dates :selected").text() === "Choose Dates"){
+        alert("Please pick a Date");
+        return false;
+    }
+    if($("#slots :selected").text() === "Choose Time Slot"){
+        alert("Please choose a Time Slot");
+        return false;
+    }
+    var text = document.getElementById("pno").value;
+    var regx = /^[6-9]\d{9}$/ ;
+    if(regx.test(text))
+        return true;
+    else
+        alert("Please correct Phone number");
+        return false;
+}
+
 
 //++++++++++Utility functions end++++++++++++
 
@@ -112,8 +136,7 @@ async function get_Data(){
     
     $('form').on('submit',function(e){
         e.preventDefault();
-        if(validatePhone() === false){
-            alert("Please correct Phone number");
+        if(validate() === false){            
             return;
         }
         var formData = new FormData( this );
@@ -124,7 +147,12 @@ async function get_Data(){
             response = response.text();
             return response;
         }).then(function(text){
-            alert(text);
+            var obj = JSON.parse(text);
+            if(obj.status === "Failure"){
+                alert("There was an error. Please retry");
+                return;
+            }
+            alert(obj.status);
             $('form')[0].reset();
             clearCourses();
         });    

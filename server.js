@@ -2,7 +2,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var multer = require("multer");
 var nodemailer = require('nodemailer');
-const { getMaxListeners } = require("process");
+// const { getMaxListeners } = require("process");
 var upload = multer();
 var app = express();
 
@@ -33,9 +33,17 @@ app.post("/",function(req,res){
 
     transporter.sendMail(mailOptions,function(error,info){
         if(error){
-            res.send("Some error was found, please refill the form");
+            var data = {
+                status: "Failure"
+            }
+            var jsonData = JSON.stringify(data);
+            res.send(jsonData);
         } else{
-            res.send("NotchUp Trial Class Booked successfully");
+            var data = {
+                status: "Success"
+            }
+            var jsonData = JSON.stringify(data);
+            res.send(jsonData);
         }
     })
 })

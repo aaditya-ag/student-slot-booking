@@ -126,7 +126,8 @@ async function get_Data(){
                 for(var i = 0;i<option.slots.length;i++){                        
                         var date = new Date(Number(option.slots[i].slot));
                         if(isValidDate(Number(option.slots[i].slot)) && selectedDate == date.toDateString()){
-                            slots.append($('<option></option>').text(date.toTimeString()));
+                            var time = date.getHours()+":" + ((date.getMinutes()<10)?"0":"") + date.getMinutes();
+                            slots.append($('<option></option>').text(time));
                         }
                 }
             }

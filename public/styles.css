@@ -35,13 +35,17 @@ label{
 
 .btn{
     padding:10px 20px;
-    width:15%;
+    width:20%;
+    max-width: 200px;
+    min-width: 100px;
     font-size:100%;
     margin: 50px auto 50px auto;
     background-color: black;
     border-radius: 5px;
     font-family: 'Merriweather', serif;
+    cursor: pointer;
     color: white;
+    transition: all 0.5s;
 }
 
 .btn:hover{
@@ -80,3 +84,9 @@ label{
 #request-ongoing{
     color: green;
 }
+
+@media screen and (max-width: 800px) {
+    .form-left-element,.form-right-element {
+      width: 90%;
+    }
+  }

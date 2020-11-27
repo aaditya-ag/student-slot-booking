@@ -159,6 +159,7 @@ async function get_Data(){
             alert(obj.status);
             $('form')[0].reset();
             clearCourses();
+            get_Data();
         });    
     });
     
